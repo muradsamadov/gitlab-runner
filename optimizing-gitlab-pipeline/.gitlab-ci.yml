@@ -1,0 +1,22 @@
+stages:
+  - build
+  - deploy
+
+image: node
+
+build:
+  # image: node
+  stage: build
+  script:
+    - npm install
+  artifacts:
+    paths:
+      - node_modules
+      - package-lock.json
+    expire_in: 1 week
+
+deploy:
+  # image: node
+  stage: deploy
+  script:
+    - node index.js
