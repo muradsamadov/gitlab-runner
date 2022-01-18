@@ -1,0 +1,11 @@
+# Gitlab Custom variables
+
+image: node
+
+variables:
+  NAME: 'Murad'
+  MESSAGE: 'How are you?'
+
+display_message:
+  script:
+    - echo "Hello $NAME, $MESSAGE"
