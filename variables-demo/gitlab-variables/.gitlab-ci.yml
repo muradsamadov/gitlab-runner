@@ -1,0 +1,8 @@
+# Gitlab variables
+
+image: node
+
+demo-job:
+  script:
+    - echo $CI_COMMIT_MESSAGE
+    - echo $CI_JOB_NAME
