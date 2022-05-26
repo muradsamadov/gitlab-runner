@@ -5,7 +5,8 @@ stages:
 image: node
 
 build:
-  # image: node
+  tags:
+    - shell
   stage: build
   script:
     - npm install
@@ -16,7 +17,9 @@ build:
     expire_in: 1 week
 
 deploy:
-  # image: node
+  tags:
+    - shell
   stage: deploy
   script:
     - node index.js
+
